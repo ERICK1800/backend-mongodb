@@ -1,0 +1,25 @@
+use("FatecItu")
+db.prestadores.insertOne({
+    "cnpj": "45150718000142",
+    "razao_social": "CARLOS DOS SANTOS ME",
+    "cnae_fiscal": 451510,
+    "nome_fantasia": "CARLOS MEN",
+    "data_inicio_atividade": "2020-08-01",
+    "localizacao": {
+        "type": "Point",
+        "coordinates": [-23.2904, -47.2963]
+    }
+})
+
+use("FatecItu")
+db.prestadores.insertOne({
+    "cnpj": "45150718000142",
+    "razao_social": "VITÓRIA AUMEIDA ME",
+    "cnae_fiscal": 451510,
+    "nome_fantasia": "VITÓRIA MEN",
+    "data_inicio_atividade": "2020-08-01",
+    "localizacao": {
+        "type": "Point",
+        "coordinates": [-23.2904, -47.2963]
+    }
+})
