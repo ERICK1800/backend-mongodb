@@ -8,12 +8,17 @@ Content-Type: application/json
 
 ###
 // GET - Lista de regisro pela id
-GET {{baseURL}}/id/65085a15bcc1245ffa4101d4
+GET {{baseURL}}/id/65085afbbcc1245ffa4101d5
+Content-Type: application/json
+
+###
+// GET - Lista de regisro pela razão social
+GET {{baseURL}}/razao/DERROTA
 Content-Type: application/json
 
 ###
 // DELETE - Apaga um registro pela id
-DELETE {{baseURL}}/65085a15bcc1245ffa4101d4
+DELETE {{baseURL}}/65085afbbcc1245ffa4101d5
 Content-Type: application/json
 
 ###
@@ -32,3 +37,25 @@ Content-Type: application/json
         "coordinates": [-23.2904, -47.2963]
     }
 }
+
+###
+// PUT - Altera o registro
+PUT {{baseURL}}
+Content-Type: application/json
+
+{
+    "_id": "65085afbbcc1245ffa4101d5",
+    "cnpj": "45150718000149",
+    "razao_social": "DERROTA ALACARTE ME",
+    "cnae_fiscal": 451510,
+    "nome_fantasia": "DERROTA ME",
+    "data_inicio_atividade": "2020-08-01",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [
+        -23.2904,
+        -47.2963
+      ]
+    }
+  }
+

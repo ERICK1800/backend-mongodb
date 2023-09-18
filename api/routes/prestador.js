@@ -63,6 +63,24 @@ router.get('/id/:id', async(req, res) => {
 })
 
 /*
+* GET /api/prestadores/razao/:razao
+* Lista todos os prestadores do serviço pela razao social
+*/
+router.get('/razao/:razao', async(req, res) => {
+    try{
+        db.collection(nomeCollection).find({'razao_social': {$regex: req.params.razao, $options: "i"}}).toArray((err, docs) => {
+            if(err){
+                res.status(400).json(err) // bad request
+            }else{
+                res.status(200).json(docs) // retorna o documento
+            }
+        })
+    }catch(err){
+        res.status(500).json({"error": err.message})
+    }
+})
+
+/*
 * DELET /api/prestadores/:id
 * Apaga o prestadore de serviço pela id
 */
@@ -86,6 +104,27 @@ router.post('/', validaPrestador, async(req, res) =>{
     }else{
         await db.collection(nomeCollection)
         .insertOne(req.body)
+        .then(result => res.status(200).send(result))
+        .catch(err => res.status(400).json(err))
+    }
+})
+
+/*
+* PUT /api/prestadores
+* Altera um prestador de serviço
+*/
+router.put('/', validaPrestador, async(req, res) =>{
+    let idDocumento = req.body._id // armazena o id do documento
+    delete req.body._id // iremos remover o id do body
+
+    const errors = validationResult(req)
+    if(!errors.isEmpty()){
+        return res.status(400).json(({
+            errors: errors.array()
+        }))
+    }else{
+        await db.collection(nomeCollection)
+        .updateOne({'_id': {$eq: ObjectId(idDocumento)}},{$set: req.body})
         .then(result => res.status(200).send(result))
         .catch(err => res.status(400).json(err))
     }
