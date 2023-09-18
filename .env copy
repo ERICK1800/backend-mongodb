@@ -1,2 +1,2 @@
-MONGODB_URL = SuaURLdoMongoDB
-MONGODB_DB = SuaDataBase
+MONGODB_URI = mongodb+srv://FatecItu:Fatec2023@fatecitu.wfxhacs.mongodb.net/
+MONGODB_DB = FatecItu
