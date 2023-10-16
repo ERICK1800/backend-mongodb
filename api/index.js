@@ -4,6 +4,7 @@ const app = express()
 const port = 4000
 //import das rotasda app
 import rotasPrestadores from './routes/prestador.js'
+import rotasUsuarios from './routes/usuario.js'
 
 app.use(express.json()) // irá fazer o parse do arquivo JSON
 
@@ -15,6 +16,8 @@ app.use('/favicon.ico', express.static('public/imagens/pc.png'))
 
 // Rotas da API
 app.use('/api/prestadores', rotasPrestadores)
+app.use('/api/usuario', rotasUsuarios)
+
 app.get('/api', (req, res) => {
     res.status(200).json({
         message: 'API Fatec 100% funcional🖐',

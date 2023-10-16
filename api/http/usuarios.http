@@ -1,0 +1,13 @@
+// Teste das Restrições REST dos usuários
+
+@baseURL = http://localhost:4000/api/usuarios
+
+###
+POST {{baseURL}}
+Content-Type: application/json
+
+{
+    "nome": "Carlos Uruguaio",
+    "email": "carlosuruguaio@gmailcom",
+    "senha": "123Mudar"
+}

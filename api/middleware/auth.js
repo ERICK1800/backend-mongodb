@@ -1,4 +1,4 @@
-import { Jwt } from "jsonwebtoken";
+import jwt from 'jsonwebtoken'
 
 export default async function auth(req, res, next){
     const token = req.header('access-token') || req.headers['x-access-token']
