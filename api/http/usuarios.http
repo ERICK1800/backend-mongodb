@@ -8,6 +8,43 @@ Content-Type: application/json
 
 {
     "nome": "Carlos Uruguaio",
-    "email": "carlosuruguaio@gmailcom",
-    "senha": "123Mudar"
+    "email": "carlosuruguaio@gmail.com",
+    "senha": "@123Mudar"
+}
+
+###
+// POST - Efetuar o login
+POST {{baseURL}}/login
+Content-Type: application/json
+
+{
+    "email": "carlosuruguaio@gmail.com",
+    "senha": "@123Mudar"
+}
+
+###
+// GET - Usuários
+GET {{baseURL}}
+Content-Type: application/json
+access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjUzNjZkNmIyN2I5Y2YzNGZlOTMxNTQ2In0sImlhdCI6MTY5ODA3MjA4MywiZXhwIjoxNjk4MzMxMjgzfQ.ZoBxprGoz99dFvSSi2p4d3Ah_kU7bIWCkOLWQR-5NgM
+
+###
+// DELETE - Usuários
+DELETE {{baseURL}}/65368922e5306c9b9d619520
+Content-Type: application/json
+access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjUzNjZkNmIyN2I5Y2YzNGZlOTMxNTQ2In0sImlhdCI6MTY5ODA3MjA4MywiZXhwIjoxNjk4MzMxMjgzfQ.ZoBxprGoz99dFvSSi2p4d3Ah_kU7bIWCkOLWQR-5NgM
+
+###
+// PUT - Usuários
+PUT {{baseURL}}/65368922e5306c9b9d619520
+Content-Type: application/json
+access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjUzNjZkNmIyN2I5Y2YzNGZlOTMxNTQ2In0sImlhdCI6MTY5ODA3MjA4MywiZXhwIjoxNjk4MzMxMjgzfQ.ZoBxprGoz99dFvSSi2p4d3Ah_kU7bIWCkOLWQR-5NgM
+
+{
+    "nome": "Carlos Uruguaio",
+    "email": "carlosuruguaio2@gmail.com",
+    "ativo": true,
+    "tipo": "Cliente",
+    "senha": "@123Mudar2",
+    "avatar": "https://ui-avatars.com/api/?name=Carlos+Uruguaio+2&&background=random"
 }
