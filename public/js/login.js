@@ -6,6 +6,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     //obteno os valores do form
     const login = document.getElementById('login').value
     const senha = document.getElementById('senha').value
+    const resultadoModal = new bootstrap.Modal(document.getElementById('modalMensagem'))
     //Criando o objeto para autenticar
     const dadosLogin = {
         email: login,
@@ -25,8 +26,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             localStorage.setItem('token', data.access_token)
             window.location.href= 'menu.html'
         }else if(data.errors){ //possui algum erro?
-            const errorMessages = data.errors.map(error = error.msg).json('\n')
-            alert('Falha ao efetuar o login:\n'+errorMessages)
+            const errorMessages = data.errors.map(error => error.msg).join('<br>')
+            //alert('Falha ao efetuar o login:\n'+errorMessages)
+            document.getElementById('mensagem').innerHTML = `<span class="text-danger">${errorMessages}</span>`
+            resultadoModal.show() //abre o modal
         }else{
             alert('Não foi possivel efetuar o l9ogin no servidor')
         }
