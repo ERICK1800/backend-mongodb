@@ -4,12 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backend Projeto</title>
-    <!-- Bootstrap https://www.bootstrapcdn.com -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Área Restrita</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/estilo.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="imagens/computer.png" />
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card shadow-lg">
+                    <div class="card-header">
+                        <h2 class="text-success">Área Restrita</h2>
+                    </div>
+                    <!-- SVG -->
+                    <div class="d-flex align-itens-center justify-content-center">
+                        <object data="imagens/winner.svg" type="image/svg+xml" style="width:50%"></object>
+                    </div>
+                    <div class="card-body">
+                        <form id="loginForm">
+                            <div class="my-1">
+                                <label for="login" class="form-label">E-mail de usuário</label>
+                                <input type="text" class="form-control" id="login" name="login" autofocus autocomplete="email">
+                            </div>
+                            <div class="my-1">
+                                <label for="senha" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="senha" name="senha">
+                            </div>
+                            <div class="my-3">
+                                <button type="submit" class="btn btn-success">
+                                    <i class="bi bi-file-earmark-lock"></i> Login
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        Ainda não é usuário? <a href="usuário.html">Cadastre-se</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
         <div class="bg-ligt rounded-lg">
             <h1 class="display-4">Fatec Itu</h1>
             <p class="lead">Be vindo ao Backend do projeto</p>
@@ -18,6 +61,8 @@
             <a class="btn btn-primary btn-lg" href="/api" role="button">Acessar a API REST</a>
             <a class="btn btn-primary btn-lg" href="/api/prestadores" role="button">Lista de Prestadores</a>
         </div>
+        -->
     </div>
+    <script src="js/login.js"></script>
 </body>
 </html>

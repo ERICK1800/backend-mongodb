@@ -1,0 +1,5 @@
+body{
+    background-image: url('../imagens/fundo.png');
+    background-size: cover; /* Cobre a área visível */
+    background-repeat: no-repeat; /* Evita a repetição da imagen */
+}
