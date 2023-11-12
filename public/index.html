@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/estilo.css" />
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="imagens/computer.png" />
-</head>
+</head> 
 <body>
     <div class="container mt-5">
         <div class="row justify-content-center">
@@ -25,43 +25,33 @@
                     <div class="card-header">
                         <h2 class="text-success">Área Restrita</h2>
                     </div>
-                    <!-- SVG -->
+                    <!-- Carregando o SVG -->
                     <div class="d-flex align-itens-center justify-content-center">
                         <object data="imagens/winner.svg" type="image/svg+xml" style="width:50%"></object>
                     </div>
                     <div class="card-body">
                         <form id="loginForm">
-                            <div class="my-1">
-                                <label for="login" class="form-label">E-mail de usuário</label>
+                            <div class="mb-2">
+                                <label for="login">E-mail do Usuário</label>
                                 <input type="text" class="form-control" id="login" name="login" autofocus autocomplete="email">
                             </div>
-                            <div class="my-1">
-                                <label for="senha" class="form-label">Senha</label>
+                            <div class="mb-2">
+                                <label for="senha">Senha</label>
                                 <input type="password" class="form-control" id="senha" name="senha">
                             </div>
-                            <div class="my-3">
+                            <div class="mt-3">
                                 <button type="submit" class="btn btn-success">
                                     <i class="bi bi-file-earmark-lock"></i> Login
                                 </button>
                             </div>
                         </form>
                     </div>
-                    <div class="card-footer">
-                        Ainda não é usuário? <a href="usuário.html">Cadastre-se</a>
+                    <div class="card-footer text-muted">
+                        Ainda não é usuário? <a href="usuario.html">Cadastre-se!</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!--
-        <div class="bg-ligt rounded-lg">
-            <h1 class="display-4">Fatec Itu</h1>
-            <p class="lead">Be vindo ao Backend do projeto</p>
-            <hr class="my-4">
-            <p>100% desenvolvido com tecnologia <i>open source</i></p>
-            <a class="btn btn-primary btn-lg" href="/api" role="button">Acessar a API REST</a>
-            <a class="btn btn-primary btn-lg" href="/api/prestadores" role="button">Lista de Prestadores</a>
-        </div>
-        -->
     </div>
     <!-- Modal -->
     <div class="modal fade" id="modalMensagem" tabindex="-1" aria-labelledby="ModalMensagemLabel" aria-hidden="true">

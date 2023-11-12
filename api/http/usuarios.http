@@ -26,19 +26,19 @@ Content-Type: application/json
 // GET - Usuários
 GET {{baseURL}}
 Content-Type: application/json
-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjUzZmI1OWRmMzBlMjMzMzhhZDIzY2FlIn0sImlhdCI6MTY5ODY3NDI2NywiZXhwIjoxNjk4OTMzNDY3fQ.RjVDX8Bv8uqlQspVItCrDsj4x-MkeYMGzqCXGRfT2_U
+access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjUzZmI1OWRmMzBlMjMzMzhhZDIzY2FlIn0sImlhdCI6MTY5OTgxODUxNywiZXhwIjoxNzAwMDc3NzE3fQ.Y2GtTb_TV9rsIT0U6Wbb792lyiVU7vcc3J0CYpXsTzI
 
 ###
 // DELETE - Usuários
 DELETE {{baseURL}}/65368922e5306c9b9d619520
 Content-Type: application/json
-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjUzZmI1OWRmMzBlMjMzMzhhZDIzY2FlIn0sImlhdCI6MTY5ODY3NDI2NywiZXhwIjoxNjk4OTMzNDY3fQ.RjVDX8Bv8uqlQspVItCrDsj4x-MkeYMGzqCXGRfT2_U
+access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjUzZmI1OWRmMzBlMjMzMzhhZDIzY2FlIn0sImlhdCI6MTY5OTgxODUxNywiZXhwIjoxNzAwMDc3NzE3fQ.Y2GtTb_TV9rsIT0U6Wbb792lyiVU7vcc3J0CYpXsTzI
 
 ###
 // PUT - Usuários
 PUT {{baseURL}}/65368922e5306c9b9d619520
 Content-Type: application/json
-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjUzZmI1OWRmMzBlMjMzMzhhZDIzY2FlIn0sImlhdCI6MTY5ODY3NDI2NywiZXhwIjoxNjk4OTMzNDY3fQ.RjVDX8Bv8uqlQspVItCrDsj4x-MkeYMGzqCXGRfT2_U
+access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjUzZmI1OWRmMzBlMjMzMzhhZDIzY2FlIn0sImlhdCI6MTY5OTgxODUxNywiZXhwIjoxNzAwMDc3NzE3fQ.Y2GtTb_TV9rsIT0U6Wbb792lyiVU7vcc3J0CYpXsTzI
 
 {
     "nome": "Carlos Uruguaio",

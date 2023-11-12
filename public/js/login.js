@@ -1,17 +1,19 @@
-const urlBase = 'http://localhost:4000/api'
+const urlBase = 'https://backend-mongodb-erick.vercel.app/api'
+//const urlBase = 'http://localhost:4000/api'
 
 //monitorando o submit do formulário
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault() //evita o recarregamento do form
-    //obteno os valores do form
-    const login = document.getElementById('login').value
-    const senha = document.getElementById('senha').value
-    const resultadoModal = new bootstrap.Modal(document.getElementById('modalMensagem'))
-    //Criando o objeto para autenticar
+document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault()
+    const login = document.getElementById("login").value
+    const senha = document.getElementById("senha").value
+    const resultadoModal = new bootstrap.Modal(document.getElementById("modalMensagem"))
+
+    // Dados do usuário para autenticação
     const dadosLogin = {
         email: login,
         senha: senha
     }
+
     //Efetuando o post para a API REST
     fetch(`${urlBase}/usuarios/login`, {
         method: 'POST',
@@ -28,10 +30,11 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         }else if(data.errors){ //possui algum erro?
             const errorMessages = data.errors.map(error => error.msg).join('<br>')
             //alert('Falha ao efetuar o login:\n'+errorMessages)
-            document.getElementById('mensagem').innerHTML = `<span class="text-danger">${errorMessages}</span>`
+            document.getElementById('mensagem').innerHTML = `<span class='text-danger'>${errorMessages}</span>`
             resultadoModal.show() //abre o modal
         }else{
-            alert('Não foi possivel efetuar o l9ogin no servidor')
+            document.getElementById("mensagem").innerHTML = `<span class='text-danger'>Não foi possível efetuar o login. Verifique as suas credenciais</span>`
+            resultadoModal.show();
         }
     }).catch(error => {
         console.error(`Erro no login ${error}`)
